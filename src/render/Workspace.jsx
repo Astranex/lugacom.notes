@@ -6,9 +6,9 @@ function Workspace(props) {
       props.setTodos(
       props.todos.map(todo => {
 
-        localStorage.setItem('todos', JSON.stringify(props.todos)) // Сохранение изменений в Local Storage
+        localStorage.setItem('todos', JSON.stringify(props.todos))
 
-        if (todo.rendered === true && document.getElementsByTagName('textarea')[0].value != false) {
+        if (todo.rendered === true && document.getElementsByTagName('textarea')[0].value !== false) {
 
         todo.title = document.getElementsByTagName('textarea')[0].value
         todo.description = document.getElementsByTagName('textarea')[1].value

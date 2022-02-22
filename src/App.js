@@ -1,5 +1,5 @@
-import React from 'react' // Импортируем реакт
-import NoteList from './notes/NoteList' // Импортируем созданный компонент
+import React from 'react'
+import NoteList from './notes/NoteList'
 import AddNote from './notes/AddNote'
 import Workspace from './render/Workspace'
 import Context from './context'
@@ -9,10 +9,7 @@ function App() {
   const [todos, setTodos] = React.useState([
     // {id: 1, completed: false, rendered: false, title: 'Купить хлеб', description: ''},
     // {id: 2, completed: false, rendered: false, title: 'Купить масло', description: ''},
-    // {id: 3, completed: false, rendered: false, title: 'Сделать реферат', description: ''},
-    // {id: 4, completed: false, rendered: false, title: 'Сходить в парикмахерскую', description: ''},
-    // {id: 5, completed: false, rendered: false, title: 'Сходить на работу', description: ''},
-    // {id: 6, completed: false, rendered: false, title: 'Отпраздновать день рождения!', description: ''}
+    // {id: 3, completed: false, rendered: false, title: 'Сделать реферат', description: ''}
   ])
 
   let localStorageTodos = JSON.parse(localStorage.getItem('todos'))
@@ -30,7 +27,7 @@ function App() {
         todos[i].title = localStorageTodos[i].title
         todos[i].description = localStorageTodos[i].description
 
-      } else if (todos[i] != true && localStorageTodos[i]) {
+      } else if (todos[i] !== true && localStorageTodos[i]) {
 
         localStorageTodos[i].rendered = false
         todos.push(localStorageTodos[i])
@@ -49,7 +46,7 @@ function App() {
       return todo
     }))
 
-    localStorage.setItem('todos', JSON.stringify(todos)) // Сохранение изменений в Local Storage
+    localStorage.setItem('todos', JSON.stringify(todos))
   }
 
   function addNote(title) {
@@ -94,7 +91,7 @@ function App() {
         document.getElementsByTagName('textarea')[1].value = ''
 
       setTodos(todos.filter(todo => {
-        return todo.id != id
+        return todo.id !== id
       }))
     }
 

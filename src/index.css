@@ -1,7 +1,6 @@
 body {
   margin: 0;
   background: url(../public/bg.jpg) no-repeat center top / cover;
-  /*background-color: #e7e7e7;*/
   font-family: Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -56,12 +55,6 @@ h1 {
   color: #1616F7;
 }
 
-/*.todo {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-*/
 ul {
   display: block;
   list-style: none;
@@ -106,15 +99,8 @@ li:active {
   background-color: #eee;
 }
 
-li:first-child {
-  /*border-top-left-radius: 5px;*/
-  /*border-top-right-radius: 5px;*/
-}
-
 li:last-child {
   margin-top: 1px;
-  /*border-bottom-left-radius: 5px;*/
-  /*border-bottom-right-radius: 5px;*/
 }
 
 li input {

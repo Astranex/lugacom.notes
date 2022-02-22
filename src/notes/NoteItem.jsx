@@ -2,8 +2,6 @@ import React, {useContext} from 'react'
 import PropTypes from 'prop-types'
 import Context from '../context'
 
-// import Workspace from '../render/Workspace'
-
 function NoteItem({todos, todo, index, onChange}) {
 	const {removeTodo} = useContext(Context)
 	const classSpan = []
@@ -44,7 +42,7 @@ function NoteItem({todos, todo, index, onChange}) {
 
 	  	for (let i = 0; i < todos.length; i++) {
 
-	  		if (document.getElementsByTagName('li')[i].getAttribute('id') != todo.id) {
+	  		if (document.getElementsByTagName('li')[i].getAttribute('id') !== todo.id) {
 	  			document.getElementsByTagName('li')[i].classList.remove('active-li')
 	  			document.getElementsByTagName('li')[i].getElementsByTagName('span')[2].classList.remove('active-span')
 	  			todos[i].rendered = false
@@ -54,17 +52,11 @@ function NoteItem({todos, todo, index, onChange}) {
 
 	  	if (todo.rendered === true) {
 
-	  		// contains ( String ) проверяет есть ли класс у элемента
-	  		// document.getElementsByClassName('active-li').classList.remove('active-li');
-
 	 		document.getElementById(todo.id).classList.add('active-li')
 	 		document.getElementById(todo.id).getElementsByTagName('span')[2].classList.add('active-span')
 
 	 		document.getElementsByTagName('textarea')[0].removeAttribute('disabled')
 	  		document.getElementsByTagName('textarea')[1].removeAttribute('disabled')
-
-	  		// document.getElementsByTagName('textarea')[0].innerText = ''
-	  		// document.getElementsByTagName('textarea')[1].innerText = ''
 
 	  		document.getElementsByTagName('textarea')[0].value = todo.title
 			document.getElementsByTagName('textarea')[1].value = todo.description
@@ -89,16 +81,6 @@ function NoteItem({todos, todo, index, onChange}) {
 	  	}
 
 	  }
-
-	  // function editTodo() { &#9998;
-	  // 	if(todo.rendered === true) {
-	  // 		document.getElementsByTagName('textarea')[0].removeAttribute('disabled')
-			// document.getElementsByTagName('textarea')[1].removeAttribute('disabled')
-	  // 	} else {
-	  // 		document.getElementsByTagName('textarea')[0].setAttribute('disabled')
-			// document.getElementsByTagName('textarea')[1].setAttribute('disabled')
-	  // 	}
-	  // }
 
 	return (
 		<li id={todo.id} className={classLi.join(' ')}>
