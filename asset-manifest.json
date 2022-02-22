@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/lugacom.notes/static/css/main.5469fb43.css",
+    "main.js": "/lugacom.notes/static/js/main.8d06e6e6.js",
+    "static/js/787.31508f01.chunk.js": "/lugacom.notes/static/js/787.31508f01.chunk.js",
+    "static/media/bg.jpg": "/lugacom.notes/static/media/bg.86b8ec0f6b7cec27be32.jpg",
+    "index.html": "/lugacom.notes/index.html",
+    "main.5469fb43.css.map": "/lugacom.notes/static/css/main.5469fb43.css.map",
+    "main.8d06e6e6.js.map": "/lugacom.notes/static/js/main.8d06e6e6.js.map",
+    "787.31508f01.chunk.js.map": "/lugacom.notes/static/js/787.31508f01.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5469fb43.css",
+    "static/js/main.8d06e6e6.js"
+  ]
+}
